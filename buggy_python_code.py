@@ -5,7 +5,6 @@ import flask
 
 app = flask.Flask(__name__)
 
-
 @app.route("/")
 def index():
     version = flask.request.args.get("urllib_version")
@@ -30,7 +29,7 @@ def fetch_website(urllib_version, url):
 
     try:
         http = urllib.PoolManager()
-        r = http.request('GET', url)
+        # r = http.request('GET', url)
     except:
         print('Exception')
 
